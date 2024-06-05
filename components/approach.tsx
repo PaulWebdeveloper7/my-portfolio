@@ -6,7 +6,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal";
 export function CanvasRevealEffectDemo() {
   return (
     <>
-    <h1 className=" text-center text-5xl font-extrabold"> My Strategy</h1>
+    <h1 className=" text-center text-5xl font-extrabold" id="approach"> My Strategy</h1>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-black dark:bg-black w-full gap-4 mx-auto px-8">
         <Card  title="Initial Step and Design"
          des="Requirement Gathering ,

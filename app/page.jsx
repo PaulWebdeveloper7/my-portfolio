@@ -1,5 +1,4 @@
 'use client'
-import { products } from "@/utils/products";
 import Navbar from "@/components/Navbar";
 import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
@@ -37,7 +36,7 @@ const page = () => {
         <span
           className="inline-flex h-full w-full cursor-pointer  
         justify-center rounded-full bg-black px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl "
-        onClick={router.push('#contactme')}
+        onClick={()=>{router.push('#contactme')}}
         >
           Contact Me
         </span>

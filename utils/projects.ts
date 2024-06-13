@@ -1,4 +1,4 @@
-export const projects = [
+export const Projects = [
     {
       id: 1,
       title: "Aone footwear ",

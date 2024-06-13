@@ -3,6 +3,7 @@ import {Raleway} from "next/font/google"
 import "./global.css"
 import { ReactNode } from "react";
 import { Boxes } from "@/components/ui/bg";
+import Navbar from "@/components/Navbar";
 const raleway = Raleway({subsets:["latin"]});
 export const metadata :Metadata={
     title:"Komal's Portfolio",
@@ -14,6 +15,7 @@ const layout = ({children}:{children:ReactNode})=>{
  return (
     <html lang="en">
     <body>
+      <Navbar/>
       {children}
     </body>
     </html>

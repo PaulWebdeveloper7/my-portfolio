@@ -5,12 +5,13 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal";
 
 export function CanvasRevealEffectDemo() {
   return (
-    <>
-    <h1 className=" text-center text-5xl font-extrabold" id="approach"> My Strategy</h1>
+    <div className=" relative top-40">
+    <h1 className=" text-center text-5xl font-extrabold " id="approach"> My Strategy</h1>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-black dark:bg-black w-full gap-4 mx-auto px-8">
         <Card  title="Initial Step and Design"
          des="Requirement Gathering ,
          Technical Feasibility , Prototyping"
+         bgimage='bg-approach-image4 bg-cover bg-center '
           icon={<AceternityIcon order=" Step 1"
             />}>
           <CanvasRevealEffect
@@ -22,7 +23,7 @@ export function CanvasRevealEffectDemo() {
         des="Set Up Development Environment,
         Frontend Development,
         Backend Development , Database Integration"
-        
+        bgimage='bg-approach-image3 bg-cover bg-center '
           icon={<AceternityIcon order="Step 2" />}>
           <CanvasRevealEffect
             animationSpeed={3}
@@ -39,7 +40,7 @@ export function CanvasRevealEffectDemo() {
         <Card   title=" Testing and Deployment"
           icon={<AceternityIcon order="Step 3" />}
           des="Testing,Continuous Integration/Continuous Deployment (CI/CD),Deployment,Choose a cloud service provider
-          ">
+          "  bgimage='bg-approach-image2 bg-cover bg-center '>
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600"
@@ -49,8 +50,9 @@ export function CanvasRevealEffectDemo() {
 
         <Card   title=" Maintenance and Optimization"
           icon={<AceternityIcon order="Step 4" />}
-          des="Monitoring ,Performance Optimization, Security considerations , Feedback Loop.
-          ">
+          des="Monitoring ,Performance Optimization, Security considerations , Feedback Loop."
+          bgimage='bg-approach-image1 bg-cover bg-center '
+          >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-red-600"
@@ -58,7 +60,7 @@ export function CanvasRevealEffectDemo() {
           />
         </Card>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -67,18 +69,21 @@ const Card = ({
   icon,
   children,
   des,
+  bgimage,
 }: {
   title: string;
   icon: React.ReactNode;
   children?: React.ReactNode;
   des?:string;
+  bgimage?:string
 }) => {
   const [hovered, setHovered] = React.useState(false);
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-white/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[27rem] "
+      className={`border border-white/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]max-w-sm w-full mx-auto p-4 relative h-[27rem] ${bgimage}  `}
+      
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-white" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-white" />
@@ -119,7 +124,7 @@ const Card = ({
 
 const AceternityIcon = ({ order }: { order: string }) => {
   return (
-     <div>
+     <div >
       <button className="relative inline-flex overflow-hidden rounded-full p-[1px] ">
         <span
           className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]

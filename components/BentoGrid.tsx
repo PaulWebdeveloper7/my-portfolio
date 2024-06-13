@@ -26,16 +26,15 @@ const BentoGrid = () => {
       </div>
   
     <div className="glass p-10 rounded-lg shadow-lg max-w-md text-center">
-      <h1 className=" font-extrabold text-3xl">Tech Stack</h1>
+      <h1 className=" font-extrabold text-3xl">My Tech Stack</h1>
       <div className="flex flex-row items-center justify-center w-full mt-12">
       <AnimatedTooltip items={people} />
     </div>
     </div>
     </div>
-    <div className=" relative top-11">
-    <h2 className="text-center text-xl md:text-4xl font-bold text-white  ">
-             Contact me from all over the world
-          </h2>
+    <div className=" relative top-11  w-full">
+  
+          
       <GlobeDemo/>
     </div>
   </section>

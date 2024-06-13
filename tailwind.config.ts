@@ -77,6 +77,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             'custom-image': "url('/images/bg.jpg')",
+            'approach-image1': "url('/images/1.jpeg')",
+            'approach-image2': "url('/images/2.jpeg')",
+            'approach-image3': "url('/images/3.jpg')",
+            'approach-image4': "url('/images/4.png')"
+
       },
     }
   },

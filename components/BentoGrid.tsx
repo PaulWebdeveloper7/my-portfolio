@@ -11,11 +11,11 @@ const BentoGrid = () => {
       <div className=" p-10 rounded-lg shadow-lg max-w-md text-center  glass">
     <h1 className="font-extrabold text-3xl">Want to collab with me</h1>
     { iscopied ? (
-    <button className=" font-extrabold p-5 rounded-md text-black mt-10 bg-blue-800">
+    <button className=" font-extrabold p-5 rounded-md mt-10 bg-blue-800">
       Email copied 
     </button>
      ):(
-     <button className=" font-extrabold p-5 rounded-md text-black mt-10 bg-blue-800" onClick={()=>{
+     <button className=" font-extrabold p-5 rounded-md  mt-10 bg-blue-800" onClick={()=>{
         if (navigator.clipboard) {
             navigator.clipboard.writeText('komalpaulbwebdeveloper@gmail.com');
             console.log('copied to clipboard successfully')

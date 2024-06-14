@@ -3,10 +3,18 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 import { useState } from "react";
+import AddTaskIcon from '@mui/icons-material/AddTask';  
+import InfoIcon from '@mui/icons-material/Info';
+import ArticleIcon from '@mui/icons-material/Article';
 import MenuIcon from "@mui/icons-material/Menu";
+import ContactsIcon from '@mui/icons-material/Contacts';
 import CloseIcon from "@mui/icons-material/Close";
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import SpeakerNotesIcon from '@mui/icons-material/SpeakerNotes';
 import Link from "next/link";
+import HomeIcon from '@mui/icons-material/Home';
 import { useRouter } from "next/navigation";
+import ThemeSwitch from "./themeSwitch";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const router = useRouter();
@@ -16,7 +24,7 @@ const Navbar = () => {
   
     >
       <motion.div
-        className=" fixed flex justify-between w-full h-10 p-8 items-center bg-black z-50 text-white"
+        className=" fixed flex justify-between w-full h-10 p-8 items-center z-50 bg-black text-white"
         
       >
         <div className=" flex items-center gap-3">
@@ -29,7 +37,11 @@ const Navbar = () => {
             className="rounded-full"
           />
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden flex text-3xl gap-5 items-center justify-center">
+          <div>
+            <ThemeSwitch/>
+          </div>
+          <div>
           {isOpen ? (
             <CloseIcon
               onClick={() => {
@@ -42,7 +54,8 @@ const Navbar = () => {
                 setOpen(true);
               }}
             />
-          )}
+            )}
+          </div>
         </div>
         {/* large devices  */}
         <div className=" max-md:hidden">
@@ -98,12 +111,18 @@ const Navbar = () => {
             >
               Resume
             </motion.li>
+              <motion.li
+                whileHover={{ scale: 1.4 , color: '#0000FF	'}}
+                whileTap={{ scale: 0.9 }}
+              >
+                 <ThemeSwitch/>
+              </motion.li>
           </nav>
         </div>
       </motion.div>
       {/* </div> */}
       {isOpen && (
-        <nav className=" flex justify-center  w-full  items-center  bg-black  p-10 fixed z-50 h-full mt-16 text-white">
+        <motion.nav className=" flex justify-center  w-full  items-center    p-10 fixed z-50 h-full mt-16 bg-black text-white " initial={{ x: "100vw" }} animate={{ x: 0 }} transition={{ duration: 0.9, type: "spring", stiffness: 40 }}>
           <ol className="flex gap-12 flex-col h-full">
             <Link
               href={"/"}
@@ -111,7 +130,7 @@ const Navbar = () => {
                 setOpen(false);
               }}
             >
-              <li>Home</li>
+              <li>Home  <HomeIcon/></li>
             </Link>
             <Link
               href={"#aboutme"}
@@ -119,7 +138,8 @@ const Navbar = () => {
                 setOpen(false);
               }}
             >
-              <li>About me </li>
+              <li>About me  <InfoIcon/> </li>
+             
             </Link>
             <Link
               href={"#projects"}
@@ -127,7 +147,7 @@ const Navbar = () => {
                 setOpen(false);
               }}
             >
-              <li>Projects</li>
+              <li>Projects  <AccountTreeIcon/></li>
             </Link>
             <Link
               href={"#approach"}
@@ -135,7 +155,7 @@ const Navbar = () => {
                 setOpen(false);
               }}
             >
-              <li>My Strategy</li>
+              <li>My Strategy <AddTaskIcon/></li>
             </Link>
             <Link
               href={"#contactme"}
@@ -143,7 +163,7 @@ const Navbar = () => {
                 setOpen(false);
               }}
             >
-              <li>Contact me </li>
+              <li>Contact me  <ContactsIcon/> </li>         
             </Link>
             <Link
               href={"#testimonials"}
@@ -151,7 +171,7 @@ const Navbar = () => {
                 setOpen(false);
               }}
             >
-              <li>Testimonials</li>
+              <li>Testimonials  <SpeakerNotesIcon/></li>           
             </Link>
             <li
               onClick={() => {
@@ -161,10 +181,10 @@ const Navbar = () => {
                 setOpen(false);
               }}
             >
-              Resume
+              Resume <ArticleIcon/>
             </li>
           </ol>
-        </nav>
+        </motion.nav>
       )}
     </motion.div>
   );

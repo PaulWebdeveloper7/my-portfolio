@@ -13,23 +13,23 @@ import { BackgroundGradientDemo } from "@/components/aboutme";
 const page = () => {
   const router = useRouter();
   return (
-    <main className="relative w-full bg-black text-white h-full overflow-hidden ">
-      <div className="h-screen relative w-full overflow-hidden bg-black flex flex-col  items-start justify-center gap-6">
+    <main className="relative w-full  h-full overflow-hidden ">
+      <div className="h-screen relative w-full overflow-hidden  flex flex-col  items-start justify-center gap-6">
         <div
-          className="absolute inset-0 w-full h-full bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none 
+          className="absolute inset-0 w-full h-full  z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none 
       flex "
         />
         <Boxes />
         <h1
           className={cn(
-            "md:text-7xl text-4xl text-white relative z-20 font-extrabold mx-20   max-md:mx-10"
+            "md:text-7xl text-4xl  relative z-20 font-extrabold mx-20   max-md:mx-10"
           )}
           
         >
           Crafting with passion seamless, innovative, and scalable web solutions{" "}
           <br />
         </h1>
-        <p className="  text-neutral-300 relative z-20 mx-20   max-md:mx-10"
+        <p className=" relative z-20 mx-20   max-md:mx-10"
         
         >
           Hey , I am komal paul , I bring ideas to life through responsive,
@@ -45,7 +45,7 @@ const page = () => {
           />
           <span
             className="inline-flex h-full w-full cursor-pointer  
-        justify-center rounded-full bg-black px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl "
+        justify-center rounded-full  px-5 py-2 backdrop-blur-3xl font-bold text-2xl "
             onClick={() => {
               router.push("#contactme");
             }}

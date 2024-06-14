@@ -35,7 +35,7 @@ const  GlobeDemo = ()=> {
   return (
    
 
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto bg-black relative w-full">
+    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto  relative w-full">
        <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4"> 
         <motion.div
           initial={{

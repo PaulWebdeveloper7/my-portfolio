@@ -6,7 +6,7 @@ import Image from "next/image";
 export function BackgroundGradientDemo() {
   return (
     <div className=" my-11">
-      <BackgroundGradient className="rounded-[22px]  p-4 sm:p-10 bg-black dark:bg-zinc-900 w-[80vw] ">
+      <BackgroundGradient className="rounded-[22px]  p-4 sm:p-10  dark:bg-zinc-900 w-[80vw] ">
         <div className="flex  gap-16 justify-center flex-wrap">
 
         <Image
